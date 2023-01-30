@@ -1,9 +1,12 @@
 const trilat = require("trilat");
 const fs = require("fs");
-const data = require("../raw_data/testA.js");
+const dataA = require("../raw_data/testA.js");
+const dataB = require("../raw_data/testB.js");
 
-// // Loop through, determine xy coordinates, append to final data
-const finalData = data.testAData.map((i) => {
+// Make sure you specify the data you want to process
+
+// Loop through, determine xy coordinates, append to final data
+const finalData = dataA.testAData.map((i) => {
   return trilat(i);
 });
 
